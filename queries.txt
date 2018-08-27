@@ -1,0 +1,41 @@
+query test {
+  orders {
+    all {
+      dealerId
+      id
+      number
+      dealer {
+        dealerId
+        dealerName
+      }
+    }
+  }
+}
+
+
+
+query test {
+  debug {
+    httpContextIsNull
+    threadId
+  }
+  orders {
+    all {
+      debug {
+        httpContextIsNull
+        threadId
+      }
+      dealerId
+      id
+      number
+      dealer {
+        dealerId
+        dealerName
+      }
+    }
+    debug {
+      httpContextIsNull
+      threadId
+    }
+  }
+}
